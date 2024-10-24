@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Optional: Link to your custom CSS file -->
+</head>
+<body style="background-image: url('background.jpg'); background-size: cover; background-position: center;">
+    <div class="container mt-5">
+        <h1>Travel Booking Form</h1>
+        <form id="booking-form" action="https://formspree.io/f/mnnqnlll" method="POST" onsubmit="return submitForm(event)">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Travel Destination:</label>
+                <select id="destination" name="destination" class="form-control" required>
+                    <option value="">Select your destination</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Varanasi">Varanasi</option>
+                    <option value="Manali">Manali</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Darjeeling">Darjeeling</option>
+                    <option value="Digha">Digha</option>
+                    <option value="Sundarbans">Sundarbans</option>
+                    <option value="Puri">Puri</option>
+                    <option value="Kashmir">Kashmir</option>
+                    <option value="London">London</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dates">Travel Dates:</label>
+                <input type="date" id="dates" name="dates" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="travelers">Number of Travelers:</label>
+                <select id="travelers" name="travelers" class="form-control" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="special-requests">Special Requests:</label>
+                <textarea
+                    id="special-requests"
+                    name="special-requests"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Any special requests or preferences?"
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-method">Preferred Mode of Communication:</label>
+                <select id="contact-method" name="contact-method" class="form-control" required>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone Call</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select>
+            </div>
+
+            <div class="form-group form-check">
+                <label>
+                    <input type="checkbox" required /> I agree to the terms and conditions.
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Booking</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Submit the form data using Fetch API (optional for feedback, not required for Formspree)
+            const form = document.getElementById('booking-form');
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    Accept: 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Booking submitted!"); // Alert on successful submission
+                    form.reset(); // Clear the form fields after successful submission
+                } else {
+                    alert("There was a problem with your submission. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("There was a problem with your submission. Please try again.");
+            });
+
+            return false; // Prevent the default form submission
+        }
+    </script>
+</body>
+</html>
