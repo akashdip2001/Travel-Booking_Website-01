@@ -1,0 +1,79 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d7aacc;
+    color: #333;
+}
+
+.container {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 50px auto; /* Center the form with some margin on top */
+    padding: 20px;
+    background-color: #ff9362; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #121b3f; /* Tomato color for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+label {
+    font-weight: bold; /* Bold labels for clarity */
+    margin-bottom: 5px; /* Space below labels */
+    display: block; /* Make labels block elements */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Inner padding for inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px; /* Space between checkbox and text */
+}
+
+button {
+    width: 100%; /* Full width for button */
+    padding: 10px; /* Inner padding for button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded borders */
+    background-color: #ff6347; /* Tomato color for the button */
+    color: white; /* White text color */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #e5533b; /* Darker shade on hover */
+}
+
+.form-check {
+    margin-bottom: 20px; /* Space below checkbox */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+}
