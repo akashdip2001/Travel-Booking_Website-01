@@ -1,0 +1,42 @@
+.about {
+  padding: 50px 0px;
+}
+
+.about .about-image .about-image-content {
+  background: #fe4e37;
+  width: 350px;
+  line-height: 42px;
+}
+
+.about .about-content h2 {
+  font-size: 26px;
+  padding-bottom: 15px;
+}
+
+.about .card {
+  background-color: #ffffff; /* White background for the card */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  margin-bottom: 20px; /* Space between cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about .card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+
+@media screen and (max-width: 575px) {
+  .about .about-image .about-image-content {
+    width: 261px;
+    line-height: 34px;
+
+  }
+}
+
+
+
+

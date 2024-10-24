@@ -1,0 +1,130 @@
+/* Sticky Menu */
+.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: smothScroll 1s forwards;
+  background: var(--white);
+  z-index: 999;
+  background-color: #c8bee1e9;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Header section */
+header {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding: 12px 0; /* Consistent padding */
+  width: 100%;
+  background-color: rgba(18, 14, 18, 0.8); /* Default navbar background (semi-transparent) */
+  transition: all 0.3s ease; /* Smooth transition for background change */
+}
+
+.is-sticky header {
+  background-color: rgba(235, 205, 205, 0.7); /* Change navbar background to white when sticky */
+}
+
+/* Navbar Brand (Logo) */
+header .navbar .navbar-brand a {
+  font-size: 22px;
+  color: rgba(244, 52, 22, 0.981); /* White color for logo on non-sticky navbar */
+  line-height: 150%;
+  font-family: var(--fontFamily1);
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for logo color */
+}
+
+.is-sticky .navbar .navbar-brand a {
+  color: rgba(244, 22, 70, 0.867);; /* Black color for logo when navbar becomes sticky */
+}
+
+/* Navbar Links */
+header .navbar .offcanvas-body a {
+  font-size: 16px;
+  color: #d1a373fa !important; /* White links for non-sticky navbar */
+  line-height: 150%;
+  font-family: var(--fontFamily);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+.is-sticky .navbar .offcanvas-body a {
+  color: #000 !important; /* Black links for sticky navbar */
+}
+
+header .navbar .offcanvas-body a:hover {
+  color: #ff6347 !important; /* Beautiful hover color (Tomato) */
+}
+
+/* Navbar Toggle Button (Mobile Menu) */
+header .toggle_btn {
+  color: #1d1b1a; /* White toggle button for non-sticky */
+}
+
+.is-sticky .toggle_btn {
+  color: #000; /* Black toggle button for sticky */
+}
+
+/* Content Section */
+.content-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:0vh;
+  text-align: center;
+  padding-top: 95px;
+  padding-bottom: 30px;
+  background-color: #a7ebf0eb;
+}
+
+/* Centered Text */
+.center-text {
+  font-size: 20px;
+  color: rgba(26, 24, 24, 0.934);
+  line-height: 1.5; /* Improve readability with line height */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 991px) {
+  header .navbar .toggle_btn {
+    font-size: 18px;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 7px 10px;
+    transition: all 0.3s ease; /* Smooth transition for toggle button */
+  }
+
+  .is-sticky .navbar .toggle_btn {
+    border: 2px solid #000;
+    color: #000; /* Black color for sticky navbar toggle button */
+  }
+
+  .offcanvas-header {
+    border: 1px solid gainsboro;
+  }
+
+  .offcanvas-header .logo {
+    font-size: 26px;
+    color: var(--black) !important;
+    font-family: var(--fontFamily1);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .offcanvas-body .nav-link {
+    padding: 12px 0;
+    color: #000; /* Black color for dropdown items */
+  }
+
+  .offcanvas-body .dropdown-item {
+    padding: 12px 10px;
+    color: #000; /* Black color for dropdown items */
+  }
+}
+
