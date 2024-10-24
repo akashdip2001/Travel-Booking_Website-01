@@ -10,5 +10,5 @@
 ### Diploy the Code
     npm run build
 
-| [Live Build](https://travel-booking-website-qmrtlrzlu-dipankar-garus-projects.vercel.app/) |
+| [Live Build](https://travel-booking-website-ochre.vercel.app/) |
 |:---:|
