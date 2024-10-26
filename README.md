@@ -12,3 +12,6 @@
 
 | [Live Build](https://travel-booking-website-ochre.vercel.app/) |
 |:---:|
+
+Devlopment by [Dipankar](https://github.com/DipankarAOT/Travel-Booking_Website) 
+[Deploy](https://travel-booking-website-ochre.vercel.app/) by [Akashdip](https://akashdip2001.github.io/website-2/) at 24/10/2024
